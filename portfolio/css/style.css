@@ -172,7 +172,7 @@ li {
   flex-wrap: wrap;
   max-width: 800px;
   margin: 0 auto;
-  animation: feedIn 5s ease 0.3s 1 normal;
+  animation: feedIn 5s ease 1 normal;
 }
 @keyframes feedIn {
   0% {opacity: 0;}
