@@ -3,7 +3,8 @@ body {
   font-size: 14px;
   line-height: 1.8;
   letter-spacing: .8px;
-  color: #333;
+  color: #dddddd;
+  z-index: 0;
 }
 
 a {
@@ -37,15 +38,16 @@ li {
 ---------------------------------*/
 .wrapper {
   padding-top: 73px;
+  z-index: -1;
 }
 
 .section {
   padding: 90px 0;
 }
 
-.section:nth-of-type(odd) {
-  background-color: #f7f7f7;
-}
+/* .section:nth-of-type(odd) { */
+  /* background-color: #f7f7f7; */
+/* } */
 
 .inner {
   max-width: 1340px;
@@ -63,7 +65,9 @@ li {
   margin-bottom: 40px;
   text-align: center;
   letter-spacing: .05em;
-  color: #333;
+  color: #dddddd;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 0;
 }
 
 .lead {
@@ -78,8 +82,9 @@ li {
   top: 0;
   z-index: 10;
   width: 100%;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.9);
   box-shadow: 0 5px 10px -6px rgba(0,0,0,.1);
+  z-index: 1;
 }
 
 .header .inner {
@@ -119,7 +124,7 @@ li {
   padding: 5px 0;
   transition: .3s;
   letter-spacing: .05em;
-  color: #333;
+  color: #f7f7f7;
 }
 .header-nav-item a:after {
   position: absolute;
@@ -131,11 +136,32 @@ li {
   transition: .3s;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  background-color: #333;
+  background-color: #f7f7f7;
 }
 
 .header-nav-item a:hover:after {
   width: 100%;
+}
+
+#video-area {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+#video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 177.77777778vh;
+  height: 56.25vw;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 /*--------------------------------
@@ -147,6 +173,8 @@ li {
   justify-content: center;
   height: 85vh;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 10;
 }
 
 .main-visual-inner {
@@ -226,6 +254,7 @@ li {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: -40px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .works-item {
@@ -245,7 +274,7 @@ li {
   text-align: center;
   background: none;
   font-size: 16px;
-  color: #333;
+  color: #ddd;
   text-decoration: none;
   font-weight: bold;
   padding: 8px 16px;
@@ -253,11 +282,12 @@ li {
   box-shadow: 0px 0px 0px 2px #c2c8d6;/* box-shadowで外枠を */
   transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: 0;
 }
 
 .btn-denim:hover {
-  color: #f1f1f1;
-		background-color: #333;
+  color: #333;
+		background-color: #f1f1f1;
 		box-shadow: inset 0 0 5px rgb(255, 255, 255), 0 0 1.2em rgba(156, 156, 156, 0.8);
 }
 
@@ -269,20 +299,20 @@ li {
   background-color: transparent;
   font-size: 16px;
   line-height: 52px;
-  color: #333;
+  color: #f1f1f1;
   text-decoration: none;
   font-weight: bold;
-  border: 1px solid #333;
+  border: 1px solid #f1f1f1;
   position: relative;
   overflow: hidden;
-  z-index: 1;
+  z-index: 0;
   /* box-shadow: 0 0 0.8em rgba(0, 0, 0, 0.5); */
   transition: color 0.3s, background-color 0.3s;
 }
 
 .btn-open:hover {
-  color: #f7f7f7;
-  background-color: #333;
+  color: #333;
+  background-color: #f1f1f1;
 }
 
 /* .btn-open {
@@ -299,7 +329,7 @@ li {
   border: 2px solid #9ec34b;
   position: relative;
   overflow: hidden;
-  z-index: 1;
+  z-index: 0;
 } */
 /* .btn-open:after{
   width: 100%;
@@ -312,7 +342,7 @@ li {
   opacity: 0;
   transform: translateX(-50%) translateY(-50%) rotate(45deg);
   transition: .2s;
-  z-index: -1;
+  z-index: 0;
 }
 .btn-open:hover{
   color: #9ec34b;
@@ -338,6 +368,7 @@ li {
   position: relative;
   border: 2px solid #9ec34b;
   transition: .4s;
+  z-index: 0;
 }
 
 .btn-box:hover {
@@ -348,7 +379,7 @@ li {
 .btn-box:before, .btn-box:after {
   width: 100%;
   height: 100%;
-  z-index: 3;
+  z-index: 0;
   content: "";
   position: absolute;
   top: 0;
@@ -388,6 +419,7 @@ li {
   background-image: linear-gradient(-90deg, #89eb75, #f1e753);
   transition: .5s;
   background-size: 200%;
+  z-index: 0;
 }
 
 .btn-gradation:hover {
@@ -410,6 +442,8 @@ li {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: -50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 0;
 }
 
 .skill-item {
@@ -442,6 +476,7 @@ li {
   flex-wrap: wrap;
   max-width: 800px;
   margin: 0 auto;
+  z-index: 1;
 }
 .profile-img {
   width: 20%;
@@ -494,6 +529,7 @@ li {
 .footer {
   padding: 30px;
   background-color: #333;
+  z-index: -1;
 }
 
 .copyright {
@@ -566,6 +602,7 @@ li {
   .title {
     font-size: 26px;
     margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
   /* レイアウト */
