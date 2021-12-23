@@ -1,3 +1,7 @@
+html {
+  animation: fadeIn 3s ease 0s 1 normal
+}
+
 body {
   font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
   font-size: 14px;
@@ -62,9 +66,9 @@ li {
   font-size: 34px;
   font-weight: bold;
   line-height: 1;
-  margin-bottom: 40px;
   text-align: center;
   letter-spacing: .05em;
+  padding: 0 0 40px;
   color: #dddddd;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 0;
@@ -171,10 +175,17 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 85vh;
+  height: 88vh;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 10;
+}
+
+.logo {
+  display: flex;
+  max-width: 50%;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .main-visual-inner {
@@ -202,7 +213,6 @@ li {
   flex-wrap: wrap;
   max-width: 800px;
   margin: 0 auto;
-  animation: feedIn 5s ease 1 normal;
 }
 .main-parrot {
   display: flex;
@@ -216,13 +226,14 @@ li {
 .parrot-text {
   flex: auto;
 }
-@keyframes feedIn {
+@keyframes fadeIn {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
 .main-visual-img {
   width: 20%;
   margin-right: 30px;
+  margin-left: 3em; 
   border-radius: 50%;
 }
 .main-visual-img img {
@@ -230,6 +241,7 @@ li {
 }
 .main-visual-text {
   flex: 1;
+  margin-top: 20px;
 }
 
 /* .otintin { */
@@ -280,14 +292,14 @@ li {
   padding: 8px 16px;
   border: 1px none #FFF;
   box-shadow: 0px 0px 0px 2px #c2c8d6;/* box-shadowで外枠を */
-  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+  transition: background-color 0.5s, box-shadow 0.1s, color 0.5s;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   z-index: 0;
 }
 
 .btn-denim:hover {
   color: #333;
-		background-color: #f1f1f1;
+		background-color: rgba(255, 255, 255, 0.85);
 		box-shadow: inset 0 0 5px rgb(255, 255, 255), 0 0 1.2em rgba(156, 156, 156, 0.8);
 }
 
