@@ -185,7 +185,8 @@ li {
 
 .logo {
   display: flex;
-  max-width: 100%;
+  align-items: flex-start;
+  max-width: 50%;
   height: auto;
   justify-content: center;
   margin: 0 auto;
