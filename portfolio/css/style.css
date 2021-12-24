@@ -192,6 +192,17 @@ li {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 980px) {
+  .logo {
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+    height: auto;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
+
 .main-visual-inner {
   padding: 0 40px;
 }
@@ -224,11 +235,14 @@ li {
   width: 680px;
 }
 .parrot-img{
-  width: 50%;
+  max-width: 75%;
   height: auto;
+
 }
 .parrot-text {
   flex: auto;
+  display: flex;
+  overflow-wrap: break-word;
 }
 @keyframes fadeIn {
   0% {opacity: 0;}
