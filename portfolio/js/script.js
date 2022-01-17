@@ -17,4 +17,11 @@ $(function () {
     return false;
   });
 
+  //roop
+  $("#js-roop").on("click", function () {
+    for (let i = 0; i < 20; i++) {
+      alert('おちんちん');
+    }
+  });
+
 });
