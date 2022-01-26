@@ -34,7 +34,7 @@ a {
 .container2 .item4 { flex: 4 1 20px;}
 /* flexboxを使った指定：すべてのアイテムに一括指定した場合 */
 .container3 {
-  display:  flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
