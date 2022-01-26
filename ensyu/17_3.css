@@ -19,6 +19,4 @@ div {
 .contain { background-size: contain;}
 /*ここまで */
 /* p要素のマージンを指定 */
-p {
-  margin: 0;
-}
+p { margin: 0; }
