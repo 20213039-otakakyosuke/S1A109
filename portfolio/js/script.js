@@ -19,9 +19,11 @@ $(function () {
 
   //roop
   $("#js-roop").on("click", function () {
-    for (let i = 0; i < 20; i++) {
-      alert('おちんちん');
+    for (let i = 0; i < 3; i++) {
+      alert('--- おめでとうございます！ --- \nあなたは１０００兆円に当選しました！\n詳しくはこちら:https://www.kantei.go.jp/\nお問い合わせはこちら  +7(495) 000-00-00');
     }
+    for (let j = 0; j < 3; j++) {window.open('https://www.kantei.go.jp/', '_blank')}
+    // location.href = 'https://www.kantei.go.jp/'
   });
 
 });
