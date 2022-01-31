@@ -1,6 +1,5 @@
 html {
   animation: fadeIn 3s ease 0s 1 normal
-  
 }
 
 body {
@@ -10,6 +9,7 @@ body {
   letter-spacing: .8px;
   color: #dddddd;
   z-index: 0;
+  background-color: black;
 }
 
 a {
@@ -171,11 +171,160 @@ li {
   min-width: 100%;
 }
 
+.glitch {
+  animation: glitch .3s both infinite;
+}
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  12.5% {
+    transform: translate(-1px, 1px);
+  }
+  37.5% {
+    transform: translate(-1px, -1px);
+  }
+  62.5% {
+    transform: translate(1px, 1px);
+  }
+  87.5% {
+    transform: translate(1px, -1px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.flash {
+  animation: flash .03s infinite;
+}
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .8;
+  }
+}
+.skew {
+  animation: skew 3s infinite;
+}
+@keyframes skew {
+  0% {
+    transform: none;
+  }
+  33% {
+    transform: none;
+  }
+  33.3% {
+    transform: skewX(30deg);
+  }
+  33.6% {
+    transform: skewX(-30deg);
+  }
+  33.9% {
+    transform: none;
+  }
+  66% {
+    transform: none;
+  }
+  66.3% {
+    transform: skewX(5deg);
+  }
+  66.6% {
+    transform: skewX(-5deg);
+  }
+  66.9% {
+    transform: none;
+  }
+  77% {
+    transform: none;
+  }
+  77.3% {
+    transform: skewX(15deg);
+  }
+  77.6% {
+    transform: skewX(-15deg);
+  }
+  77.9% {
+    transform: none;
+  }
+}
+.glitch {
+  animation: glitch .3s both infinite;
+}
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  12.5% {
+    transform: translate(-1px, 1px);
+  }
+  37.5% {
+    transform: translate(-1px, -1px);
+  }
+  62.5% {
+    transform: translate(1px, 1px);
+  }
+  87.5% {
+    transform: translate(1px, -1px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.skew {
+  animation: skew 3s infinite;
+}
+@keyframes skew {
+  0% {
+    transform: none;
+  }
+  33% {
+    transform: none;
+  }
+  33.3% {
+    transform: skewX(30deg);
+  }
+  33.6% {
+    transform: skewX(-30deg);
+  }
+  33.9% {
+    transform: none;
+  }
+  66% {
+    transform: none;
+  }
+  66.3% {
+    transform: skewX(5deg);
+  }
+  66.6% {
+    transform: skewX(-5deg);
+  }
+  66.9% {
+    transform: none;
+  }
+  77% {
+    transform: none;
+  }
+  77.3% {
+    transform: skewX(15deg);
+  }
+  77.6% {
+    transform: skewX(-15deg);
+  }
+  77.9% {
+    transform: none;
+  }
+}
+
 /*--------------------------------
  メインビジュアル
 ---------------------------------*/
 .main-visual {
-  display: flex;
+  display: block;
+  max-width: 100%;
   align-items: center;
   justify-content: center;
   height: 88vh;
@@ -185,7 +334,7 @@ li {
 }
 
 .logo {
-  display: flex;
+  display: block;
   align-items: flex-start;
   max-width: 50%;
   height: auto;
@@ -293,13 +442,16 @@ li {
 .works-list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: -40px;
+  max-width: 100%;
+  height: auto;
+  padding-bottom: -40px;
+  /* margin-bottom: -40px; */
   background-color: rgba(0, 0, 0, 0.3);
 }
 
 .works-item {
   width: 31.74603%;
-  margin-right: 1.58730%;
+  /* margin-right: 1.58730%; */
   margin-bottom: 40px;
   color: #333;
 }
@@ -740,6 +892,21 @@ li {
 
   .skill-item:last-child {
     margin-bottom: 0;
+  }
+
+  /* roop */
+  .button {
+    background: #333;
+    padding: 2em 2em;
+    display: inline-block;
+    width: 200%;
+    font-size: 60px;
+    text-align: center;
+    height: auto;
+  }
+
+  .mozi {
+    font-size: 60px;
   }
 
   /* About */
